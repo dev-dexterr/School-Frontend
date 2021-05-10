@@ -1,28 +1,31 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <Toolbar />
+    <v-main class="text=center">
+      <v-container fluid>
+        <transition name="fade" mode="out-in">
+          <v-container>
+            <v-row>
+              <v-col>
+                <v-sheet min-height="70vh" rounded="lg">
+                  <router-view></router-view>
+                </v-sheet>
+              </v-col>
+            </v-row>
+          </v-container>
+        </transition>
+      </v-container>
+    </v-main>
+    <Footer />
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Toolbar: () => import("@/components/core/Toolbar"),
+    Footer: () => import("@/components/core/Footer"),
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
