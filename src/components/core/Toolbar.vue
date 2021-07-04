@@ -14,8 +14,8 @@
       </div>
       <v-spacer></v-spacer>
       <v-toolbar-items>
-        <v-btn text to="/" tag="span" style="cursor: pointer">
-          <router-link to="/" tag="span" style="cursor: pointer">
+        <v-btn text to="/dashboard" tag="span" style="cursor: pointer">
+          <router-link to="/dashboard" tag="span" style="cursor: pointer">
             {{ $vuetify.lang.t("$vuetify.dashboard") }}
           </router-link>
         </v-btn>

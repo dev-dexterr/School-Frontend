@@ -104,7 +104,8 @@ export default {
         },
         {
           text: this.$vuetify.lang.t("$vuetify.status"),
-          value: "status"
+          value: "student.status",
+          align: "start"
         },
         {
           text: this.$vuetify.lang.t("$vuetify.opt"),

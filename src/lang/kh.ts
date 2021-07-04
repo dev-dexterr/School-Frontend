@@ -1,4 +1,4 @@
-import { kh} from 'vuetify/es5/locale'
+import { kh } from 'vuetify/es5/locale'
 
 export default {
     ...kh, 
@@ -38,4 +38,5 @@ export default {
     Manet : "ម៉ាណែត",
     thong : "ប៊ុន​​ថុង",
     tola : "តុលា",
+    active: "ដំណើរការ"
 }

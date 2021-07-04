@@ -4,12 +4,18 @@ import Dashboard from '../components/Dashboard.vue'
 import Lecture from '../components/Lecture.vue'
 import Room from '../components/Room.vue'
 import Student from '../components/Student.vue'
+import Login from '../components/Login.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
     {
         path: '/',
+        name: 'login',
+        component: Login
+    },
+    {
+        path: '/dashboard',
         name: 'Dashboard',
         component: Dashboard
     },

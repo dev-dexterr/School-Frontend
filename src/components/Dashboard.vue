@@ -91,6 +91,7 @@ export default {
           text: this.$vuetify.lang.t("$vuetify.status"),
           sortable: false,
           value: "status",
+          align: "center"
         },
         {
           text: this.$vuetify.lang.t("$vuetify.starton"),
@@ -107,6 +108,7 @@ export default {
         {
           text: this.$vuetify.lang.t("$vuetify.roomName"),
           sortable: false,
+          align: "center",
           value: "room.name",
         },
         {
@@ -181,6 +183,10 @@ export default {
   methods: {
     readFee: async function () {
       const data = await api.readFee();
+      data.forEach((p) => {
+        p.startOn = this.moment(p.startOn).format("YYYY/MM/DD");
+        p.dueOn = this.moment(p.dueOn).format("YYYY/MM/DD");
+      })
       this.datas = data;
     },
     readRooms: async function () {

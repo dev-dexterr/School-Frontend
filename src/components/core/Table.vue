@@ -56,6 +56,13 @@
           </v-chip>
           </span>
       </template>
+      <template v-slot:[`item.student.status`]>
+          <span>
+            <v-chip dark small class="my-0" color="green">
+            {{ $vuetify.lang.t("$vuetify.active") }}
+          </v-chip>
+          </span>
+      </template>
     </v-data-table>
   </div>
 </template>

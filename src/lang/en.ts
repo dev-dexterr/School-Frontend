@@ -37,5 +37,6 @@ export default{
     Manet : "Manet",
     thong : "Bun Thong",
     tola : "Tola",
-    group : "Group"
+    group : "Group",
+    active : "Active",
 }

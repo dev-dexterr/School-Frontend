@@ -2,15 +2,17 @@ import Vue from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify';
 import router from './router';
-import CountryFlag from 'vue-country-flag'
+import CountryFlag from 'vue-country-flag';
+import moment from 'moment';
 
 //axios
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
+Vue.component('moment', moment)
 Vue.component('country-flag', CountryFlag)
 Vue.config.productionTip = false
-
+Vue.prototype.moment = moment;
 Vue.use(VueAxios, axios)
 
 axios.defaults.baseURL = "http://localhost:8082/api/school"
