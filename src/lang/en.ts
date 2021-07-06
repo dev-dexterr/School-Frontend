@@ -41,5 +41,7 @@ export default{
     active : "Active",
     login: "Login",
     username: "Username",
-    password: "Password"
+    password: "Password",
+    register: "Register",
+    logout: "Logout"
 }

@@ -38,5 +38,10 @@ export default {
     Manet : "ម៉ាណែត",
     thong : "ប៊ុន​​ថុង",
     tola : "តុលា",
-    active: "ដំណើរការ"
+    active: "ដំណើរការ",
+    login: "ចូល",
+    username: "ឈ្មោះ",
+    password: "លេខសម្ងាត់",
+    register: "ចុះឈ្មោះ",
+    logout: "ចាកចេញ"
 }

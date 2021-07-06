@@ -38,6 +38,7 @@
                 :label="$vuetify.lang.t('$vuetify.password')"
                 :rules="[rule.required]"
                 v-model="form.password"
+                prepend-inner-icon="mdi-key"
                 @keypress.enter="handleLogin"
               />
             </v-col>
@@ -91,22 +92,8 @@ export default {
     }
   },
   methods: {
-    // handleLogin() {
-    //   this.$store.dispatch("auth/signin", this.form)
-    //     .then(()=>{
-    //       this.$router.push("/dashboard")
-    //     },
-    //     (error)=>{
-    //       this.message = (error.response &&
-    //           error.response.data &&
-    //           error.response.data.message) ||
-    //         error.message ||
-    //         error.toString();
-    //     })
-    // },
     handleLogin() {
       if (this.$refs.form.validate()) {
-        console.log(this.form)
         this.$store.dispatch("auth/login", this.form).then(
           () => {
             this.$router.push("/dashboard");
