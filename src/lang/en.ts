@@ -39,4 +39,7 @@ export default{
     tola : "Tola",
     group : "Group",
     active : "Active",
+    login: "Login",
+    username: "Username",
+    password: "Password"
 }
