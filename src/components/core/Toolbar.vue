@@ -103,6 +103,16 @@
           <v-switch v-model="isDark" inset></v-switch>
         </v-list-item-action>
         <v-icon>mdi-weather-night</v-icon>
+
+        <v-btn
+          text
+          @click.stop="logOut"
+          tag="span"
+          style="cursor: pointer"
+          v-if="currentUser"
+        >
+          {{ $vuetify.lang.t("$vuetify.logout") }}
+        </v-btn>
       </v-toolbar-items>
     </v-app-bar>
   </div>
